@@ -1,0 +1,7 @@
+﻿{
+  Id: 50,
+  Name: Marvin,
+  Skills: [
+    Juggling
+  ]
+}

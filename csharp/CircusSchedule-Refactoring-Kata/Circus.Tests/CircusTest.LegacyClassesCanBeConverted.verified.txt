@@ -1,0 +1,50 @@
+﻿[
+  {
+    Id: 10,
+    Name: Juggler,
+    PlannedMinutes: 3,
+    AssignedMinutes: 1
+  },
+  {
+    Id: 11,
+    Name: Tightrope,
+    PlannedMinutes: 7,
+    AssignedMinutes: 2
+  },
+  {
+    Id: 20,
+    Name: ShowPart1,
+    PlannedMinutes: 10,
+    AssignedMinutes: 3
+  },
+  {
+    Id: 14,
+    Name: MC,
+    PlannedMinutes: 4,
+    AssignedMinutes: 2
+  },
+  {
+    Id: 12,
+    Name: Trapeze,
+    PlannedMinutes: 10,
+    AssignedMinutes: 6
+  },
+  {
+    Id: 13,
+    Name: Clown,
+    PlannedMinutes: 6,
+    AssignedMinutes: 1
+  },
+  {
+    Id: 21,
+    Name: ShowPart2,
+    PlannedMinutes: 16,
+    AssignedMinutes: 7
+  },
+  {
+    Id: 30,
+    Name: 2025-05-19, Paris,
+    PlannedMinutes: 30,
+    AssignedMinutes: 12
+  }
+]
