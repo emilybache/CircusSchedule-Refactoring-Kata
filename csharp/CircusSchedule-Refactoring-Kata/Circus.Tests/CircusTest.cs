@@ -27,30 +27,18 @@ public class CircusTest
 
         return Verify(result);
     }
-
-    [Test]
-    public Task ConvertArtistOneSkill()
-    {
-        var legacyArtists = LegacyTestData.CreateTestArtists();
-        LegacyRecordList legacyList = new LegacyRecordList(legacyArtists);
-        var converter = new LegacyConverter(new LegacyUtil(legacyList, LegacyTestData.CreateTestSpecs()));
-        var artist1 = legacyArtists[0];
-
-        var result1 = converter.ConvertArtist(artist1);
-
-        return Verify(result1);
-    }
     
     [Test]
-    public Task ConvertArtistMultiSkill()
+    public void FindAct()
     {
-        var legacyArtists = LegacyTestData.CreateTestArtists();
-        LegacyRecordList legacyList = new LegacyRecordList(legacyArtists);
-        var converter = new LegacyConverter(new LegacyUtil(legacyList, LegacyTestData.CreateTestSpecs()));
-        
-        var result4 = converter.ConvertArtist(legacyArtists[4]);
+        var legacyShow = LegacyTestData.CreateTestShow();
+        LegacyRecordList legacyList = new LegacyRecordList(legacyShow);
+        var util = new LegacyUtil(legacyList, LegacyTestData.CreateTestSpecs());
+        var services = new ShowServices(legacyShow, util);
 
-        return Verify(result4);
+        var task = services.FindAct("21","12");
+
+        Assert.That(task.id, Is.EqualTo("12"));
     }
     
 }

@@ -24,27 +24,15 @@ public class LegacyTestData
         return show;
     }
 
-    public static LegacyRecord[] CreateTestArtists()
-    {
-        return new LegacyRecord[]
-        {
-            new LegacyRecord("50", "Marvin", "Artist", new LegacyRecordList()),
-            new LegacyRecord("51", "Nils", "Artist", new LegacyRecordList()),
-            new LegacyRecord("52", "Georg", "Artist", new LegacyRecordList()),
-            new LegacyRecord("53", "Nicole", "Artist", new LegacyRecordList()),
-            new LegacyRecord("54", "Emily", "Artist", new LegacyRecordList()),
-        };
-    }
-
     public static LegacyRecordSpec[] CreateTestSpecs()
     {
         return new[]
         {
-            new LegacyRecordSpec("100", "YT0x267", "skills", ["50"], 0, "Juggling"),
-            new LegacyRecordSpec("110", "YT0x267", "skills", ["51"], 0, "Juggling,Clowns"),
-            new LegacyRecordSpec("120", "YT0x267", "skills", ["52"], 0, "Trapeze,Juggling,Tightrope"),
-            new LegacyRecordSpec("130", "YT0x267", "skills", ["53"], 0, "Trapeze,Juggling,MC"),
-            new LegacyRecordSpec("130", "YT0x267", "skills", ["54"], 0, "Trapeze,Tightrope,MC"),
+            new LegacyRecordSpec("100", "YT0x267", "skills", ["10"], 0, "Juggling"),
+            new LegacyRecordSpec("110", "YT0x267", "skills", ["11"], 0, "Clowns"),
+            new LegacyRecordSpec("120", "YT0x267", "skills", ["12"], 0, "Tightrope"),
+            new LegacyRecordSpec("130", "YT0x267", "skills", ["13"], 0, "Juggling"),
+            new LegacyRecordSpec("130", "YT0x267", "skills", ["14"], 0, "MC"),
 
             new LegacyRecordSpec("200", "YT0x235", "seconds", ["10"], 3 * 60, "plannedDuration"),
             new LegacyRecordSpec("210", "YT0x235", "seconds", ["11"], 7 * 60, "plannedDuration"),
@@ -52,11 +40,6 @@ public class LegacyTestData
             new LegacyRecordSpec("210", "YT0x235", "seconds", ["13"], 6 * 60, "plannedDuration"),
             new LegacyRecordSpec("210", "YT0x235", "seconds", ["14"], 4 * 60, "plannedDuration"),
             
-            new LegacyRecordSpec("300", "YT0x839", "seconds", ["10"], 1 * 60, "assignedDuration"),
-            new LegacyRecordSpec("310", "YT0x839", "seconds", ["11"], 2 * 60, "assignedDuration"),
-            new LegacyRecordSpec("310", "YT0x839", "seconds", ["12"], 6 * 60, "assignedDuration"),
-            new LegacyRecordSpec("310", "YT0x839", "seconds", ["13"], 1 * 60, "assignedDuration"),
-            new LegacyRecordSpec("310", "YT0x839", "seconds", ["14"], 2 * 60, "assignedDuration"),
         };
     }
 }

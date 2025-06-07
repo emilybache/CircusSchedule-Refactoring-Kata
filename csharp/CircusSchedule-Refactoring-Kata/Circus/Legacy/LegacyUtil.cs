@@ -31,17 +31,7 @@ public class LegacyUtil
         var siValue = spec.SiValue;
         return (int)Math.Round(siValue / 60, 0);
     }
-
-    public int AssignedMinutes(LegacyRecord record)
-    {
-        var spec = GetSpec(record, "YT0x839", "seconds");
-        if (spec == null)
-        {
-            return 0;
-        }
-        var siValue = spec.SiValue;
-        return (int)Math.Round(siValue / 60, 0);
-    }
+    
 
     public List<Skill> Skills(LegacyRecord record)
     {
@@ -50,6 +40,7 @@ public class LegacyUtil
         var skills = new List<Skill>();
         foreach (var spec in specs)
         {
+            // TODO: this part should be in the LegacyConverter
             foreach (var description in  spec.description.Split(","))
             {
                 if (Enum.TryParse(description, out Skill skill))
